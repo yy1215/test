@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.5",
 	"appid": "wx2b025e9f8651da51",
-	"projectname": "magpie",
+	"projectname": "test",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

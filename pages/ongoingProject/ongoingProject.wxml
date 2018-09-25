@@ -29,7 +29,7 @@
 </view>
 <!-- 列表 -->
 <view class="section">
-  <view wx:if="{{projects}}" >
+  <view wx:if="{{projects}}">
     <navigator class="item  clearfix  {{project.name.length>19?'my-bg':'cy-bg'}}" wx:for="{{projects}}" wx:for-index="id" wx:for-item="project" wx:key="unique"  url="../detailsDefault/detailsDefault?projectId={{project.id}}" hover-class='none'>
       <view class="li-title">
           <text class="icon-my left" wx:if="{{project.createUser == userId}}">我</text>
@@ -71,7 +71,7 @@
     <view class="no-project">
       <image src="../../img/wuwendang.png"></image>
       <view class="no-text">当前暂无进行中项目</view>
-      <navigator class="create-btn" url="../editProject/editProject">立即创建</navigator>
+      <button class="create-btn" bindtap='openUrl'>立即创建</button>
     </view>  
   </view>
    
