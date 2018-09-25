@@ -1,0 +1,96 @@
+<!--pages/editProject/editProject.wxml-->
+<form class="" bindsubmit="formSubmit">
+  <view class="header index-header">
+    <view class="line-blue"></view>
+    <view class="header-top">
+       <input name="input" class="project-name" value="{{projectName}}" type="text" placeholder="请输入项目名称" maxlength="45"/>
+    </view>
+  </view>
+  <view class="floor">
+    <view class="title"><text class="icon"></text> 报名时间</view>
+    <view class="item">
+      <view class="item-ti">开始时间</view>
+        <picker mode="time" name="enrollStart" data-id='start-date' value="{{startTime}}" bindchange="bindTimeChange">
+          <view class="picker">{{startTime}}</view>
+        </picker>
+        <text class="line">|</text>
+        <picker mode="date" name="enrollStartDa" data-id='start-date' value="{{startDate}}" bindchange="bindDateChange">
+          <view class="picker">{{startDate}}</view>
+        </picker>
+    </view>
+    <view class="item">
+      <view class="item-ti">结束时间</view>
+      <picker mode="time" name="enrollEnd" data-id='end-date' value="{{endTime}}" bindchange="bindTimeChange">
+        <view class="picker">{{endTime}}</view>
+      </picker>
+      <text class="line">|</text>
+      <picker mode="date" name="enrollEndDa" data-id='end-date' value="{{endDate}}" bindchange="bindDateChange">
+        <view class="picker">{{endDate}}</view>
+      </picker>
+    </view>
+    <view class="item remind-set"  >
+      <view class="item-ti">提醒设置</view>
+      <navigator class="set"  url="../remindSet/remindSet?title=bmsj">
+        <text class="num" wx:if="{{regstNum!=0}}">{{regstNum}}个</text>
+        <text class="num no-set" wx:if="{{regstNum == 0}}">未设置</text>
+        <image class="arrow-right" src="../../img/gz-jiru02@2x.png"></image>
+      </navigator>
+      <view class="set-data">{{regstDate}}</view>
+    </view>
+    
+  </view>
+  <view class="floor">
+    <view class="title"><text class="icon"></text>投标时间</view>
+    <view class="item">
+      <view class="item-ti">截止时间</view>
+        <picker mode="time" name="bidEnd" data-id='deadline' value="{{deadlineTime}}" bindchange="bindTimeChange">
+          <view class="picker">{{deadlineTime}}</view>
+        </picker>
+        <text class="line">|</text>
+        <picker mode="date" name="bidEndDa" data-id='deadline' value="{{deadline}}" bindchange="bindDateChange">
+          <view class="picker">{{deadline}}</view>
+        </picker>
+    </view>
+    <view class="item remind-set" bindtap='datechange'>
+      <view class="item-ti">提醒设置</view>
+      <navigator class="set" url="../remindSet/remindSet?title=tbsj">
+        <text class="num" wx:if="{{bidNum!=0}}">{{bidNum}}个</text>
+        <text class="num no-set" wx:if="{{bidNum == 0}}">未设置</text>
+        <image class="arrow-right" src="../../img/gz-jiru02@2x.png"></image>
+      </navigator>
+       <view class="set-data"> {{bidDate}}</view>
+    </view>
+  </view>
+  <button formType="submit" class="save-btn" bindtap='saveBtn'>保存</button>
+  <button formType="reset" class="delete-btn" bindtap="modalTap">删除</button>
+</form>
+
+<!-- 删除提醒 -->
+<view class="modal-mask" hidden="{{modalHidden}}">
+  <view class="modal-box h476">
+    <view class="modal-title">删除项目</view>
+    <view class="modal-content text-centent">
+      <view class="w540">请确认删除该项目？</view>
+    </view>
+    <view class="modal-btn-box">
+      <button class="cancel-btn" bindtap='modalCancel'>取消</button>
+      <button class="confirm-btn" bindtap='modalCancel'>确认</button> 
+    </view>
+
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png"></image>
+</view>
+
+<!-- 保存提示 -->
+<view class="modal-mask" hidden="{{modalHidden2}}">
+  <view class="modal-box h476">
+    <view class="modal-title">保存</view>
+    <view class="modal-content text-centent">
+      <view class="w540">请先完善所有信息！</view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="know-btn" bindtap="modalCancel">我知道了</view>
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png"></image>
+</view>

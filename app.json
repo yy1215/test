@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/testResult/testResult",
+    "pages/ongoingProject/ongoingProject",
+    "pages/editProject/editProject",
+    "pages/template/template",
+    "pages/templateView/templateView",
+    "pages/selfTest/selfTest",
+    "pages/testDetails/testDetails",
+    "pages/historyProject/historyProject",
+    "pages/historyResult/historyResult",
+    "pages/projectMember/projectMember",
+    "pages/detailsDefault/detailsDefault",
+    "pages/projectReport/projectReport",
+    "pages/share/share",
+    "pages/opinion/opinion",
+    "pages/remindSet/remindSet",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#629AF9",
+    "navigationBarTitleText": "喜鹊投标卫士",
+    "navigationBarTextStyle": "#fff"
+  }
+}

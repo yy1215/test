@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="index-box">
+  <button class="list-btn" hover-class='none'><image src="../../img/jingxingz@2x.png"></image></button>
+  <button class="list-btn" hover-class='none'><image src="../../img/lishixiangmu@2x.png"></image></button>
+  <button class="list-btn" hover-class='none'><image src="../../img/xiangmubaobiao@2x.png"></image></button>
+  <view class="text-box clearfix">
+    <image src='../../img/why@2x.png'></image>
+    <text>可以用于投标过程项目管理，为您及投标团队成员提供投标过程中重要节点提醒服务，投标统计分析，提供标书风险检查服务。以后它还可以为大家提供更多招投标过程所需要的服务。</text>
+  </view>
+  <form bindsubmit='submit' report-submit='true'> 
+    <button form-type='submit' class="confirm-btn add-project" open-type="getUserInfo" bindgetuserinfo="addProject">立即创建</button>
+  </form>
+</view>
+
+
+
+<view class="index-footer white">
+  <button>吐个槽</button> 
+</view>
+
+

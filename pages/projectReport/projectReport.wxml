@@ -1,0 +1,62 @@
+<!--pages/projectReport/projectReport.wxml 项目报表-->
+<view class="index-header">
+  <view class="line-blue"></view>
+  <view class="header-top">
+    <image class="left-icon" src="../../img/sx-xiangmu@2x.png"></image>
+    <text>项目报表</text>
+    <!-- 顶部菜单 -->
+    <view class="top-menu">
+      <image class="menu-icon" bindtap="subNav" src="../../img/gz-fenlei@2x.png"></image>
+      <view class="menu-list"  wx:if= hidden="{{hiddenSub}}">
+        <view class="li">
+          <image class="li-icon" src="../../img/fl-jingxing@2x.png"></image>
+          <navigator url="../ongoingProject/ongoingProject" hover-class="navigator-hover">进行中项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-lishi@2x.png"></image>
+          <navigator url="../historyProject/historyProject" hover-class="navigator-hover">历史项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-xiangmu@2x.png"></image>
+          <navigator url="../projectReport/projectReport" hover-class="navigator-hover">项目报表</navigator>
+        </view> 
+      </view>
+      <!-- 下拉栏层 -->
+      <view class="menu-layer"  hidden="{{hiddenSub}}"></view>
+    </view>
+  </view>
+</view> 
+<view class="report-title">本报表仅统计您所创建和加入的项目数据</view>
+<view class="section clearfix">
+  <view class="item projet-total">
+    <view class="item-title">项目总数</view>
+    <view class="project-num">
+      <view class="num-status">
+        <view><text class="num">{{ongoingNum}}</text>个</view>
+        <view>进行中的项目</view>
+      </view>
+      <view class="num-status">
+        <view><text class="num">{{historyNum}}</text>个</view>
+        <view>历史项目</view>
+      </view>
+    </view>
+  </view>
+   <!-- <view class="item history-total">
+    <view class="item-title">历史项目中标情况</view>
+    <view class="project-num">
+      <view class="num-status">
+        <view><text class="num">10</text>个</view>
+        <view>已中标</view>
+      </view>
+      <view class="num-status">
+        <view><text class="num">10</text>个</view>
+        <view>未中标</view>
+      </view>
+    </view>
+    <view class="prompt"><text>*</text> 当前有10个项目未标记中标情况</view>
+  </view> -->
+</view>
+
+<view class="index-footer pre">
+  <navigator url="../opinion/opinion">吐槽</navigator>
+</view>

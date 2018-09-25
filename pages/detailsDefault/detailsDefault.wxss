@@ -1,0 +1,410 @@
+/* pages/detailsDefault/detailsDefault.wxss */
+.seciton{
+  padding-bottom: 90rpx;
+}
+/* 标题 */
+.head{
+  padding: 30rpx;
+}
+.details-title{
+ border-bottom: 1px solid #E5E5E5;
+ padding-bottom: 30rpx;
+}
+.head .title{
+  font-size:36rpx;
+  color: #333;
+  padding-bottom: 30rpx;
+}
+.time-status{
+  font-size: 28rpx;
+  color: #999;
+}
+.time-status view{
+  display: inline-block;
+}
+.time-status .statur-btn{
+  width:104rpx;
+  line-height: 42rpx;
+  font-size: 26rpx;
+  color: #FB6A5E;
+  text-align: center;
+  background:#fef2f0;
+  border-radius:21rpx;
+  margin-left: 28rpx;
+}
+.time-status navigator{
+  font-size: 28rpx;
+  color: #629AF9;
+}
+.project-status{
+  height: 136rpx;
+  font-size: 26rpx;
+  color: #ccc;
+  padding-top: 30rpx;
+  position: relative;
+}
+
+.project-status .status{
+  display: inline-block;
+  width: 134rpx;
+  text-align: center;
+  position: relative;
+}
+.project-status .status:first-of-type{
+  width: 111rpx;
+}
+.project-status .status:last-of-type{
+  width: 177rpx;
+}
+.project-status .status.star01 .text{
+  width: 110rpx;
+  position: absolute;
+  left: 23rpx;
+}
+.project-status .status .text{
+  width: 110rpx;
+  position: absolute;
+  left: 40rpx;
+}
+.project-status .status .icon{
+  display: inline-block;
+  width: 100%;
+  height:68rpx;
+}
+.project-status .icon01{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-baomingkaishi01@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.project-status .icon02{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaomingjiezhi01@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.project-status .icon03{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaoshufengzhuang01@2.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.project-status .icon04{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaoshusongdai01@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.project-status .icon05{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-toubiaojiehzi01@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.project-status .status.active{
+  color: #FB6A5E;
+}
+.status.active .icon01{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-baomingkaishi02@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.status.active .icon02{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaomingjiezhi02@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.status.active .icon03{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaoshufengzhuang02@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.status.active .icon04{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-biaoshusongdai02@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.status.active .icon05{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-baomingkaishi01@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* 报名时间&&截止时间 */
+.start-time,.end-time{
+  padding-left: 30rpx;
+  margin: 24rpx 0;
+}
+.start-time .title-box,.end-time .title-box{
+  border-bottom: 1px solid #e5e5e5;
+  margin-right: 30rpx;
+}
+.title-box .left-title{
+  display: inline-block;
+  font-size: 30rpx;
+  color: #333;
+  padding: 35rpx 0;
+}
+.right-time{
+  width: 42%;
+  font-size: 30rpx;
+  color: #666;
+  text-align: right;
+  padding-top: 23rpx;
+  line-height: 75rpx;
+}
+.right-time .zhi{
+  width:40rpx;
+  line-height: 40rpx;
+  color: #fff;
+  text-align: center;
+  background:#629AF9;
+  border-radius:50%;
+  margin-top: 10rpx;
+}
+.end-time .right-time{
+  line-height: 75rpx;
+}
+.reminder-time{
+  font-size: 28rpx;
+  padding-bottom: 30rpx;
+}
+.reminder-time .mark{
+  line-height: 33rpx;
+  color: #aaa;
+  padding-top: 20rpx;
+}
+.reminder-time .icon-mark{
+  width: 33rpx;
+  height: 33rpx;
+  vertical-align: middle;
+}
+.reminder-time .line{
+  display: inline-block;
+  color: #f7faff;
+  margin: 0 11rpx 0 12rpx;
+}
+.reminder-time .li{
+  display: inline-block;
+  width:210rpx;
+  line-height: 70rpx;
+  color: #666;
+  text-align: center;
+  background: #f7faff;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}
+.project-bid{
+  padding:30rpx 30rpx 0;
+}
+.project-bid .title-box{
+  font-size: 30rpx;
+  border-bottom: 1px solid  #e5e5e5;
+}
+.project-bid .icon-biaoshu{
+  width:34rpx;
+  height:34rpx;
+  margin-right: 10rpx;
+}
+.project-bid .left-title{
+  line-height: 34rpx;
+  padding: 0;
+  color: #629AF9;
+}
+.blue-line{
+  width: 100rpx;
+  height: 1rpx;
+  background: #629AF9;
+  float: left;
+  margin:16rpx 0 0 10rpx;
+}
+.project-bid .title-box .prompt{
+  color: #aaa;
+  padding: 27rpx 0;
+}
+.project-bid .title-box .prompt text{
+  color: #333;
+}
+.project-bid .title-box .prompt .icon-tixing{
+  width:33rpx;
+  height:33rpx;
+  vertical-align: middle;
+}
+.icon-jinru{
+  width:14rpx;
+  height:24rpx;
+}
+.project-bid .title-box .prompt navigator{
+  color: #629AF9;
+}
+.not-checked{
+  color: #666;
+  padding-bottom: 30rpx;
+}
+.checked-list .li{
+  font-size: 30rpx;
+  color: #666;
+  margin-bottom: 24rpx;
+}
+.checked-list .li:first-of-type{
+  color: #629AF9;
+}
+/* 项目标书 */
+.tender-status {
+  padding: 0 30rpx;
+}
+.tender-status  .title-box{
+  border-bottom: 1px solid #e5e5e5;
+}
+.tender-status:last-of-type .title-box{
+  border-bottom:none;
+}
+
+.tender-status .right-time.time-status{
+  line-height: 75rpx;
+  color: #333;
+}
+.tender-status .right-time.unpackaged .text{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #999;
+}
+.right-time .start-btn{
+  display: inline-block;
+  font-size: 28rpx;
+  width:160rpx;
+  line-height:54rpx;
+  text-align: center;
+  border-radius:27px;
+  margin-left: 30rpx;
+}
+.right-time .start-btn.blue{
+  color: #629AF9;
+  background:#f7faff;
+}
+.right-time .start-btn.orange{
+  color: #FB6A5E;
+  background:#fef2f0;
+}
+
+/* 项目成员成员管理 */
+.project-member{
+  margin-top: 24rpx;
+}
+.project-member .title{
+  font-size: 30rpx;
+  color: #333;
+  padding:30rpx;
+}
+.project-member .title .num{
+  color: #666;
+}
+.project-member .title navigator{
+  color: #629AF9;
+}
+.project-member .list-box{
+  height: 190rpx;
+  overflow: hidden;
+}
+.project-member .member-list{
+  width:20%;
+  font-size: 26rpx;
+  color: #666;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.project-member .member-list .img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.project-member .member-list .name{
+  padding: 0 20rpx;
+  margin: 20rpx 0 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.project-member .member-list .sponsor{
+  width:78rpx;
+  height:30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  background:#629AF9;
+  position: absolute;
+  right: 0;
+  top: 70rpx;
+}
+.project-member .more{
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+/* 底部 */
+.details-footer{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  box-shadow:0px 0px 10px rgba(4,0,0,0.1);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.details-footer .self-test,.details-footer .share-btn{
+  display: inline-block;
+  width: 49.5%;
+  font-size: 34rpx;
+  color: #629AF9;
+  text-align: center;
+  overflow: hidden;
+}
+.details-footer .share-btn{
+  border-radius: 0;
+  background: none;
+  padding: 0;
+}
+.details-footer .share-btn::after{
+border: none;
+}
+
+.details-footer .self-test{
+  background: none;
+}
+.details-footer .self-test::after{
+  border-radius: 0;
+  border: none;
+   border-left: 1px solid #E5E5E5;
+}
+.details-footer text{
+  float: left;
+}
+.details-footer .icon{
+  width: 35rpx;
+  height: 36rpx;
+  float: left;
+  margin: 27rpx 10rpx 0 100rpx;
+}
+.details-footer .icon.share-icon{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-gongxiang@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.details-footer .icon.self-icon{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-jiancha01@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.details-footer .gray{
+    color: #999;
+} 
+.details-footer .gray .icon.self-icon{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-jiancha02@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+/* 默认 */
+.default-box .details-title .statur-btn{
+ display: none;
+}
+.default-box .checked{
+  display: none;
+}
+
+/* 其它人发起 */
+.others-box .details-title .head-edit{
+ display: none;
+}
+.others-box .details-footer .share-btn{
+  width: 100%;
+}
+.others-box .details-footer navigator.self-test{
+ display: none;
+}

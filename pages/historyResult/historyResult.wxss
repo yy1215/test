@@ -1,0 +1,48 @@
+/* pages/historyResult/historyResult.wxss */
+.history{
+  padding-top: 45rpx;
+}
+.history .item{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  overflow: hidden;
+  padding:0 30rpx  45rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+.history .item:first-of-type .result{
+  color:#629AF9; 
+}
+.history .line{
+ width: 2px;
+ height: 100%;
+ background: #629AF9;
+ position: absolute;
+ left: 50rpx; 
+ top: 30rpx; 
+}
+
+.history .order{
+  width:42rpx;
+  height:42rpx;
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  background:#629AF9;
+  border-radius:50%;
+  position: absolute;
+  top: 10rpx;
+}
+.history .date{
+  color: #666;
+  padding: 0 0 20rpx 60rpx;
+}
+.history .result{
+  color: #333;
+  padding: 0 0 16rpx 60rpx;
+}
+.history .remark{
+  color: #999;
+  padding-left: 60rpx;
+}

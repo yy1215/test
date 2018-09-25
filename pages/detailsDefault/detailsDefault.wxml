@@ -1,0 +1,227 @@
+<!--pages/detailsDefault/detailsDefault.wxml 项目详情-->
+<!-- 默认：default-box  他人发起：others-box -->
+<view class="seciton">
+  <view class="head bg-white clearfix">
+    <view class="details-title">
+      <view class="title">{{projectName}}</view>
+      <view class="time-status">
+        <view>创建于<text>{{crtime}}</text> </view>
+        <!-- <view class="statur-btn">已中标</view> -->
+        <navigator class="head-edit right" hover-class="navigator-hover" url="../editProject/editProject?projectId={{projectId}}">编辑项目</navigator>
+      </view>
+    </view>
+    <view class="project-status clearfix">
+      <view class="status star01 active">
+        <view class="icon icon01"></view>
+        <view class="text">报名开始</view>
+      </view>
+      <view class="status star02 active">
+        <view class="icon icon02"></view>
+        <view class="text">报名截止</view>
+      </view>
+      <view class="status star03 ">
+        <view class="icon icon03"></view>
+        <view class="text">标书封装</view>
+      </view>
+      <view class="status star04">
+        <view class="icon icon04"></view>
+        <view class="text">标书送达</view>
+      </view>
+      <view class="status star05 ">
+        <view class="icon icon05"></view>
+        <view class="text">投标截止</view>
+      </view>
+    </view>
+  </view>
+  <view class="start-time bg-white clearfix">
+    <view class="title-box">
+      <text class="left-title">报名开始时间</text>
+      <view class="right-time right">
+        <view class="">{{enrollStart}}</view>
+      </view>
+    </view>
+     <view class="title-box">
+      <text class="left-title">报名结束时间</text>
+      <view class="right-time right">
+        <view class="">{{enrollEnd}}</view>
+      </view>
+    </view>
+    <view class="reminder-time">
+      <view class="mark" bindtap='applyModal'>系统将会在以下时间点分别进行提醒：
+       <image class="icon-mark" src="../../img/wenhao@2x.png" ></image>
+      </view>
+      <view class="li" wx:for="{{enrollRemindTime}}" wx:for-index="idx" wx:for-item="itemName" wx:key="this">
+        {{itemName}}
+      </view>
+    </view>
+  </view>
+  <view class="end-time bg-white clearfix">
+    <view class="title-box">
+      <text class="left-title">投标截止时间</text>
+      <view class="right-time right">
+        <view class="">{{bidEnd}}</view>
+      </view>
+    </view>
+    <view class="reminder-time">
+      <view class="mark">系统将会在以下时间点分别进行提醒：
+       <image class="icon-mark hide" src="../../img/wenhao@2x.png"></image>
+      </view>
+       <view class="li" wx:for="{{bidRemindTime}}" wx:for-index="idx" wx:for-item="itemName"  wx:key="this">
+        {{itemName}}
+      </view> 
+    </view>
+  </view>
+  <!-- 项目标书 -->
+  <view class="project-bid bg-white clearfix">
+    <view class="title-box clearfix">
+      <view class="clearfix">
+       <image class="icon-biaoshu left" src="../../img/xq-biaoshu@2x.png"></image>
+       <text class="left-title left">项目标书</text>
+       <text class="blue-line"></text>
+      </view>
+      <!-- 未检查 -->
+      <view class="not-checked">
+       <view class="prompt" bindtap="checkModal">
+          <text>标书检查 </text>
+          （检查次数建议 <image class="icon-tixing" src="../../img/wenhao@2x.png"></image> )
+        </view>
+        <view>从未进行过标书检查</view>
+      </view>
+      <!-- 已检查 -->
+      <view class="checked hide">
+        <view class="prompt">
+          <text>标书检查 </text>
+          （检查次数建议 <image class="icon-tixing" src="../../img/wenhao@2x.png"></image> )
+          <navigator class="right" url="">
+            查看 <image class="icon-jinru" src="../../img/xq-jinru@2x.png"></image> 
+          </navigator>
+        </view>
+        <view class="checked-list">
+          <view class="li">可以送出（共检查10项，其中2项未完成）</view>
+          <view class="li">可以送出（共检查10项，其中2项未完成）</view>
+          <view class="li">可以送出（共检查10项，其中2项未完成）</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tender-status bg-white clearfix">
+    <view class="title-box">
+      <text class="left-title">标书封装时间</text>
+      <view class="right-time right unpackaged">
+        <view class="text">未封装</view>
+        <view class="start-btn blue">完成封装</view>
+      </view>
+      <view class="right-time right time-status hide">
+        <view class="">2018-8-28 18:00</view>
+      </view>
+    </view>
+  </view>
+  <view class="tender-status bg-white clearfix">
+    <view class="title-box">
+      <text class="left-title">标书送达打卡</text>
+      <view class="right-time right unpackaged hide">
+        <view class="text">未打卡</view>
+        <view class="start-btn orange">我要打卡</view>
+      </view>
+      <view class="right-time right time-status ">
+        <view class="">2018-8-28 18:00</view>
+      </view>
+    </view>
+  </view>
+
+<!-- 项目成员管理 -->
+  <view class="project-member bg-white clearfix">
+    <view class="title clearfix">
+      <text class="left-title left">项目成员<text class="num">（10人）</text></text>
+      <navigator class="right" url="../projectMember/projectMember?projectId={{projectId}}">管理</navigator>
+    </view>
+    <view class="list-box clearfix"  style='height:{{ moreHeight }}'>
+      <view class="member-list" wx:for="{{ projectParticipants }}" wx:for-item="member" wx:for-index="index" wx:key="key">
+        <image class="img" src="{{member.avatarUrl}}"></image>
+        <view class="name">{{ member.wxName }}</view>
+        <view class="sponsor" id="{{index}}" wx:if="{{index ==0?'true':''}}">发起人</view>
+      </view>
+    </view>
+    <view class="more" hidden="{{ isShow }}" bindtap="seeMore">查看更多成员</view>
+  </view>
+  <!-- 底部 -->
+  <view class="details-footer bg-white clearfix">
+    <button class="share-btn" open-type="share">
+      <view class="icon share-icon"></view>
+      <text class="">共享项目</text>
+    </button>
+    <!-- 灰色就加上这个class gray -->
+    <button class="self-test" bindtap='checkredict'>
+      <view class="icon self-icon"></view>
+      <text>标书自检</text> 
+    </button>
+  </view>
+</view>
+
+<!-- 检查提示 -->
+<view class="modal-mask" hidden="{{modalShow}}" catchtouchmove="ture">
+  <view class="modal-box h476">
+    <view class="modal-title">检查提示</view>
+    <view class="modal-content">
+      <view>您上一次完成了{{checkRuleNum}}项标书自检，是否继续上一次的检查？</view>
+    </view>
+    <view class="modal-btn-box">
+      <navigator class="cancel-btn" bindtap="modalCancel" url="">重新检查</navigator>
+      <navigator class="confirm-btn" bindtap="modalChange" url="../selfTest/selfTest?projectId={{projectId}}&modelId={{modelId}}&pageNum={{moduleSort}}">立即前往</navigator>
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png"></image>
+</view>
+
+<!-- 报名时间提醒 -->
+<view class="modal-mask" hidden="{{applyModal}}" catchtouchmove="ture">
+  <view class="modal-box h508">
+    <view class="modal-title">报名时间提醒</view>
+    <view class="modal-content text-centent">
+      <view class="">选项“xxx前”以报名截止时间为准；</view>
+      <view class="content-li"> <text class="blue">例：</text> 选项“10分钟前”，表示距离“报名截止时间10分钟前”，以此类推。</view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="know-btn" bindtap="applyModalCancel">我知道了</view>
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png" bindtap="applyModalCancel"></image>
+</view>
+
+<!-- 检查次数建议 modalShow -->
+<view class="modal-mask" hidden="{{modalHidden}}" catchtouchmove="ture">
+  <view class="modal-box h895">
+    <view class="modal-title">检查次数建议</view>
+    <view class="modal-content text-centent">
+      <view class="content-title">投标文件完全响应招标文件是中标的一个必要条件。坚持多次检查，可最大降低废标风险。以下环节应需重复检查：</view>
+      <view class="content-li" ><text class="blue">1.</text> 定稿前检查，第一遍检查</view>
+      <view class="content-li" ><text class="blue">2.</text> 打印前阅览检查，第二遍检查</view>
+      <view class="content-li" ><text class="blue">3.</text> 打印一套后，第三遍检查</view>
+      <view class="content-li" ><text class="blue">4.</text> 复核无误后打印其余全套，第四遍
+检查</view>
+      <view class="content-li" ><text class="blue">5.</text> 装订前复核检查一遍，第五遍检查</view>
+      <view class="content-li" ><text class="blue">6.</text> 胶装好以后，封包前的检查，第六
+遍检查</view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="know-btn" bindtap="checkModalCancel">我知道了</view>
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn bt3" src="../../img/tc-guanbi@2x.png" bindtap="checkModalCancel"></image>
+</view>
+
+
+<!-- 用户授权 -->
+<view class="modal-mask" hidden="{{hasUserInfo}}" catchtouchmove="ture">
+  <view class="modal-box h476">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">
+      <view>必须授权登录之后才能操作，是否确认？</view>
+    </view>
+    <view class="modal-btn-box">
+      <button class="cancel-btn" bindtap='closeDea'>取消</button>
+      <button class="confirm-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">确认</button> 
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png" bindtap='closeDea'></image>
+</view>

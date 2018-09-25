@@ -1,0 +1,27 @@
+<!--pages/projectMember/projectMember.wxml 项目成员-->
+<form class="member-form clearfix">
+  <checkbox-group bindchange="checkboxChange">
+    <label class="item" wx:for="{{memberList}}" wx:key="key">
+      <image class="img" src="{{item.image }}"></image>
+      {{item.wxName}}
+      <checkbox class="checkbox right "  value="{{item.userId}}" checked="{{isChecked}}"/>
+    </label>
+  </checkbox-group> 
+  </form>
+
+<button class="delete-btn" bindtap='clearMembers'>移除</button>
+  
+<!-- 移除人员 -->
+<view class="modal-mask" hidden="{{modalShow}}" catchtouchmove="ture">
+  <view class="modal-box h476">
+    <view class="modal-title">移除人员</view>
+    <view class="modal-content">
+      <view >您确定要移除这些人员吗？</view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="cancel-btn" bindtap="applyModalCancel">取消</view>
+      <view class="confirm-btn" bindtap="modalSub" >确认</view>
+    </view>
+  </view>
+  <image bindtap='modalCancel' class="close-btn" src="../../img/tc-guanbi@2x.png"></image>
+</view>

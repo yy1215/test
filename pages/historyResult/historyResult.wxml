@@ -1,0 +1,10 @@
+<!--pages/historyResult/historyResult.wxml-->
+<view class="history">
+  <view class="item" wx:for="{{resultList}}" wx:for-item="items" wx:for-index="index" wx:key="key">
+    <view class="line {{items.id==1?'hide':''}} "></view>
+    <view class="order" >{{items.id}}</view>
+    <view class="date">{{items.date}}</view>
+    <view class="result">{{items.result}}</view>
+    <view class="remark">{{items.remark}}</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/share/share.wxml-->
+<view class="share">
+  <image class="success" src="../../img/cj-chenggong@2x.png"></image>
+  <view>创建成功</view>
+  <button class="share-btn" open-type="share">
+    <image class="icon-share left" src="../../img/xq-gongxiang-02@2x.png"></image>
+    <text class="left">共享给项目组成员</text>
+  </button>
+  <navigator url="../detailsDefault/detailsDefault?projectId={{projectId}}">先不共享，直接进入项目</navigator>
+</view>

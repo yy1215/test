@@ -1,0 +1,29 @@
+<!--pages/remindSet/remindSet.wxml-->
+<view class="remind-title">提醒时间点（可多选）</view>
+<!-- 报名时间提醒 -->
+<view class="" wx:if="{{urlTitle=='bmsj'}}">
+  <form class="remind-form">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="item" wx:for="{{items}}" wx:key="key">
+        <checkbox class="checkbox" id="{{item.id}}" value="{{item.value}},{{item.id}}" checked="{{item.checkFlag}}"/>{{item.value}}
+      </label>
+    </checkbox-group> 
+  </form>
+  <view class="remind-p">
+    <text class="icon-xing">*</text> 
+    <text>选项“xxx前”以报名截止时间为准；</text>
+  </view>
+  <view class="remind-p">
+    <text>例：选项“10分钟前”，表示距离“报名截止时间10分钟前”，以此类推。</text>
+  </view>
+</view>
+<!-- 投标时间提醒 -->
+<view class="" wx:if="{{urlTitle=='tbsj'}}">
+  <form class="remind-form">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="item" wx:for="{{bidList}}" wx:key="key">
+        <checkbox class="checkbox" id="{{item.id}}" value="{{item.value}},{{item.id}}" checked="{{item.checkFlag}}"/>{{item.value}}
+      </label>
+    </checkbox-group> 
+  </form>
+</view>

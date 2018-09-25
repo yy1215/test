@@ -1,0 +1,95 @@
+/* pages/templateView/templateView.wxss */
+.title-box{
+  padding-top: 30rpx;
+  margin: 0 30rpx;
+  background: #f7faff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.top-title{
+  font-size: 34rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  background: #629AF9;
+}
+.title-box .table-title{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #629AF9;
+  padding: 0;
+}
+.content-box{
+  padding-top: 224rpx;
+  background: #fff;
+  margin: 0 30rpx;
+}
+.content-box .floor-title{
+  width: 100%;
+  line-height: 90rpx;
+  font-size:30rpx;
+  color: #666;
+  text-align: center;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+.table{
+  display: table;
+  font-size: 28rpx;
+  color: #333;
+}
+.tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.th,.td{
+  display: table-cell;
+  border: 1px solid #e5e5e5;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+.th{
+  width: 80rpx;
+  border-right: 0;
+}
+
+.td.check-item{
+  width: 180rpx;
+  padding: 0 20rpx;
+}
+.td.check-content{
+  width: 515rpx;
+}
+.td:last-of-type{
+  border-left: 0;
+}
+.items-title{
+  width: 100%;
+}
+.td .item{
+  text-align: left;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.td .item:last-of-type{
+  border-bottom: 0;
+}
+.confirm-btn{
+  width:100%;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  color: #629AF9;
+  background: #fff;
+  box-shadow:0px 0px 10px rgba(4,0,0,0.08);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.confirm-btn::after{
+  border-radius: 0;
+}

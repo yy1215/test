@@ -1,0 +1,412 @@
+/**app.wxss**/
+page{
+  background: #f8f8f8;
+}
+view{
+  box-sizing: border-box;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clear {
+  clear: both;
+  height: 0px;
+  overflow: hidden;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.text-centent{
+  text-align: center
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.bg-white{
+  background: white;
+}
+
+.icon-tiem{
+  display: inline-block;
+  width:30rpx;
+  height:32rpx;
+  background-size: 100% 100%;
+  margin: 0rpx 12rpx 0 0;
+  float: left;
+}
+.start-icon{
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/jxz-baoming@2x.png');
+}
+.end-icon{
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/jxz-jiezhi@2x.png');
+}
+.create-icon{
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/jxz-chuangjian@2x.png');
+}
+.arrow-right{
+  display: inline-block;
+  width: 12rpx;
+  height: 20rpx;
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-jingru@2x.png');
+  background-size: 100% 100%;
+}
+.arrow-right2{
+  display: inline-block;
+  width: 12rpx;
+  height: 20rpx;
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xq-jinru@2x.png');
+  background-size: 100% 100%;
+}
+.index-header{
+  height: 110rpx;
+}
+.index-header .header-top {
+  width:100%;
+  height:100rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10px rgba(0,0,0,0.06);
+}
+
+.index-header .left-icon{
+  width: 44rpx;
+  height: 44rpx;
+  margin: 28rpx 12rpx 0 30rpx;
+  float: left;
+}
+.index-header .top-menu{
+  float: right;
+}
+.index-header .menu-icon{
+  width: 49rpx;
+  height: 40rpx;
+  margin: 30rpx 30rpx 0 0;
+  float: right;
+}
+.index-header text{
+  font-size: 30rpx;
+  color: #555;
+  line-height: 100rpx;
+}
+.index-header .top-menu{
+  position: relative;
+}
+.index-header .menu-list{
+  width: 276rpx;
+  height: 336rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/fl-bg@2x.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 80rpx;
+  left: -200rpx;
+  z-index: 999;
+  padding-top: 25rpx;
+}
+.index-header .menu-list .li{
+  width: 258rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #d9d7fe;
+  overflow: hidden;
+  margin: 0 auto;
+ 
+}
+.index-header .menu-list .li:last-of-type{
+  border-bottom: 0;
+}
+.index-header .menu-list .li-icon{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin: 30rpx 25rpx 30rpx 30rpx;
+}
+.index-header .menu-list navigator{
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.index-header .navigator-hover{
+  background: none;
+  color: #629AF9;
+}
+/* 头部下拉栏自定义层 */
+.menu-layer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100rpx;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9;
+}
+
+
+/* 首页底部 */
+.index-footer{
+  height: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.index-footer.white button{
+  color: #F8F8F8;
+}
+.index-footer.pre{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+.index-footer button{
+  display: inline-block;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  background: none;
+  padding: 0;
+  box-shadow: 0;
+}
+.index-footer button::after{
+  border: 0;
+}
+
+
+/* 暂无项目 */
+.no-project{
+  font-size: 30rpx;
+  color: #555;
+  text-align: center;
+}
+.no-project>image{
+  width:223rpx;
+  height:300rpx;
+  margin: 140rpx 0 30rpx;
+}
+.add-btn{
+  padding: 0;
+  position: fixed;
+  bottom: 70rpx;
+  right: 30rpx;
+}
+.add-btn::after{
+  border: 0;
+}
+.add-img{
+  width: 90rpx;
+  height: 90rpx;
+}
+.create-btn{
+  width: 300rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background: #629AF9;
+  margin: 200rpx auto;
+  border-radius: 10rpx;
+}
+
+/* 自定义弹窗 */
+.modal-mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+.modal-box{
+  width: 90%;
+  border-radius: 10rpx;
+  padding: 0 30rpx;
+  margin: 0 auto;
+}
+.modal-box .modal-title{
+  color: #fff;
+  margin: 32rpx 0 32rpx;
+  text-align: center;
+}
+.modal-box .modal-content{
+  width: 100%;
+  font-size: 30rpx;
+  color: #333; 
+  padding: 30rpx;
+}
+.modal-box .modal-content .content-li{
+  font-size: 26rpx;
+  color: #666;
+}
+.modal-box .modal-content .blue{
+  color: #6297F9;
+}
+.modal-btn-box{
+  height: 140rpx;
+  text-align: center;
+  padding-top: 40rpx;
+}
+.modal-btn-box .cancel-btn,.modal-btn-box .confirm-btn{
+  display: inline-block;
+  width:178rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  border:1px solid #EDEDED;
+  border-radius:6px;
+}
+.modal-btn-box .confirm-btn{
+  color: #fff;
+  background: #FB6A5E;
+  border-color:#FB6A5E; 
+  margin-left: 80rpx;
+}
+.modal-btn-box .know-btn{
+  width:240rpx;
+  height:66rpx;
+  line-height: 66rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background:rgba(251,106,94,1);
+  border-radius:5px;
+  margin: 0 auto;
+}
+.modal-mask .close-btn{
+  width:66rpx;
+  height:66rpx;
+  margin-left: -33rpx;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+.modal-mask .close-btn.bt3{
+  bottom: 3%;
+}
+.modal-box.h476{
+ height: 476rpx;
+ background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/tc-tishi@2x.png') no-repeat;
+ background-size: 100% 100%;
+}
+.modal-box.h476 .modal-content{
+  height: 175rpx;
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-box.h508{
+ height:508rpx;
+ background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/tc-tixing@2x.png') no-repeat;
+ background-size: 100% 100%;
+}
+.modal-box.h508 .modal-content{
+  height: 210rpx;
+  line-height: 50rpx;
+  text-align: left;
+}
+.modal-box.h895{
+ height:895rpx;
+ background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/tc-jianchacishu@2x.png') no-repeat;
+ background-size: 100% 100%;
+}
+.modal-box.h895 .modal-content{
+  height: 639rpx;
+  text-align: left;
+}
+.modal-box.h895 .modal-content .content-title{
+  line-height: 55rpx;
+  margin-bottom: 40rpx;
+  text-indent: 30rpx;
+}
+.modal-box.h895 .modal-content .content-li{
+  padding-top: 25rpx;
+}
+
+.modal-box.h770{
+  height:770rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/tc-wenxitishi@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.modal-box.h770 .content-title{
+  height: 225rpx;
+  text-indent: 40rpx;
+  text-align: left;
+  letter-spacing:2rpx;
+}
+.modal-box.h770 .content-li{
+  line-height: 42rpx;
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+.modal-box.h770 .order-icon{
+  width: 42rpx;
+  height: 42rpx;
+  float: left;
+  margin-right: 5rpx;
+}
+
+.modal-box.h596{
+  height:596rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/tc-beizhu@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.modal-box.h596 textarea{
+  width:96%;
+  height:229rpx;
+  background:rgba(250,250,250,1);
+  padding: 5rpx 10rpx 10rpx;
+  box-sizing: border-box;
+  border-radius:10px;
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+  overflow: hidden;
+}
+.modal-box.h596 .placeholder-class{
+  color: #999;
+}
+.modal-box.h596 .btn-area{
+  text-align: center;
+  margin-top: 45rpx;
+}
+
+.modal-box.h596 .btn-area .next-item{
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 62rpx;
+  background: none;
+}
+.modal-box.h596 .btn-area .next-item::after{
+  border: 0;
+}
+.modal-box.h596 .btn-area .submit-btn{
+  width:120rpx;
+  line-height:60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background:rgba(251,106,94,1);
+  border-radius:5px;
+  margin-left: 75rpx;
+}

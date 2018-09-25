@@ -1,0 +1,86 @@
+<!--pages/testResult/testResult.wxml 标书自检结果 -->
+<view class="conter-box clearfix">
+  <view class="header index-header">
+    <view class="line-blue"></view>
+    <view class="header-top">
+      <view class="top-left left">
+        <image src="{{userImg}}"></image>
+        <text class="name">{{userName}}</text>
+      </view>
+      <view class="top-right right">当前为<text>第{{operationNum}}次</text>检查</view>
+    </view>
+  </view>
+  <view class="section clearfix">
+      <view class="h3">
+        <text class="line"></text>
+        <text class="text">{{checkState}}</text>
+        <text class="line"></text>
+      </view>
+      <view class="h4">
+        <text class="line line-l"></text>
+        <text class="text">此结果由检查人员自主判断得出</text>
+        <text class="line line-r"></text>
+      </view>
+      <view class="conter-title">{{projectName}}</view>
+      <view class="title-date">
+        检查时间：{{checkDate}}
+        <navigator class="right" url="../historyResult/historyResult">历史检查结果 
+          <view class="arrow-right2"></view>
+        </navigator>
+      </view>
+      <view class="table">
+        <view class="tr table-ti">
+          <view class="td">自检类别</view>
+          <view class="td">完成项</view>
+          <view class="td">未成项</view>
+          <view class="td">操作</view>
+        </view>
+        <view class="tr">
+          <view class="td">招标文件</view>
+          <view class="td">20</view>
+          <view class="td">5</view>
+          <view class="td">
+            <navigator url="../testDetails/testDetails">查看</navigator>
+          </view>
+        </view>
+        <view class="tr">
+          <view class="td">分项检查</view>
+          <view class="td">48</view>
+          <view class="td">5</view>
+          <view class="td">
+            <navigator url="../testDetails/testDetails">查看</navigator>
+          </view>
+        </view>
+        <view class="tr">
+          <view class="td">招标投标文件封装和签字、盖章文件</view>
+          <view class="td">36</view>
+          <view class="td">5</view>
+          <view class="td">
+            <navigator url="../testDetails/testDetails">查看</navigator>
+          </view>
+        </view>
+        <view class="tr">
+          <view class="td">招标文件</view>
+          <view class="td">20</view>
+          <view class="td">5</view>
+          <view class="td">
+            <navigator url="../testDetails/testDetails">查看</navigator>
+          </view>
+        </view>
+      </view>
+      <view class="total-items">共检查{{checkRuleNum}}项</view>
+      <view class="remark">{{checkremark}}</view>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="details-footer bg-white clearfix">
+  <button class="share-btn" open-type="share">
+    <view class="icon share-icon"></view>
+    <text class="">共享项目</text>
+  </button>
+  <button class="back-home" bindtap='backHome'>
+    <view class="icon hone-icon"></view>
+    <text>返回首页</text> 
+  </button>
+</view>

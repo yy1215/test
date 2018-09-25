@@ -1,0 +1,131 @@
+<!-- 阶段 -->
+<view class="level-box clearfix">
+  <view class="level active">
+    <view class="icon-level"></view>
+  </view>
+</view>
+<!-- 主内容 -->
+<view class="section ">
+  <!-- 检查内容 -->
+  <view class="item-box clearfix {{checkModal}}" wx:for="{{textList}}"  wx:for-item="parentList" wx:for-index="parentIndex" wx:key="this" wx:if="{{parentList.show}}">
+    <view class="title clearfix">
+      <image src="../../img/zj-icon@2x.png"></image>
+      {{parentList.title}}
+      <image src="../../img/zj-icon@2x.png"></image>
+    </view>
+    <view class="content order-item clearfix " wx:for="{{parentList.list}}" wx:for-item="list" wx:fon-index="index" wx:key="this" data-parentIndex="{{parentIndex}}"  wx:if="{{ list.show}}">
+      <view class="order-title">{{parentIndex+1}}.{{index+1}}</view>
+      <view class="text">{{list.text}}</view>
+       <!-- <view class="prompt">本项上一次检查结果为 
+        <image src="../../img/zmxj-cuo@2x.png"></image>，请仔细检查 
+      </view> -->
+      <view class="btn-box">
+        <button class="btn error-btm"  bindtap="modalTap" data-current="{{index}}"></button>
+        <button class="btn confirm-btm" data-current="{{index}}" bindtap="{{!buttonClicked?'nextItem':''}}"  data-parentIndex="{{parentIndex}}" data-textval="{{list.id}}"></button>
+      </view>
+      <view class="page-box">
+        <view class="prev-page" data-current="{{index}}" bindtap="prevItem" data-parentIndex="{{parentIndex}}">{{parentIndex==0 && index+1==1?'':'上一项'}}</view> 
+        <view class="prev-page page-num right">{{index+1}}/20</view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 检查开始 -->
+  <view class="item-box clearfix {{checkMo}}">
+    <view class="title clearfix" >
+      <image src="../../img/zj-icon@2x.png"></image>
+      {{currentModuleName}}
+      <image src="../../img/zj-icon@2x.png"></image>
+    </view>
+    <view class="content start-checking  clearfix">
+      <view class="min-title">本模块共包含22小项</view>
+      <view class="prompt-1">
+        <text class="icon-xing">*</text>
+        任何一项遗漏都有可能导致废标，检查时务必要仔细核对和校对哦。
+      </view>
+      <view class="btn-box">
+        <button class="check-btn"  bindtap='startcheck'>开始检查</button>
+      </view>
+      <view class="page-box">
+        <view class="prev-page" bindtap="previousPage">{{pageNum==1?'':'上一项'}}</view> 
+      </view>
+    </view>
+  </view>
+
+  <!-- 检查结果 -->
+  <view class="item-box test-result clearfix {{checkM}} ">
+    <view class="title clearfix">
+      <image src="../../img/zj-icon@2x.png"></image>
+      标书检验结果
+      <image src="../../img/zj-icon@2x.png"></image>
+    </view>
+    <view class="content  clearfix">
+      <view class="min-title">选择标书检验结果：</view>
+      <view class="result-btn clearfix">
+        <button class="btn {{checkResultYesCla}}" hover-class="button-hover " bindtap='sendFun'>可以送出</button>
+        <button class="btn {{checkResultNoCla}}" hover-class="button-hover " bindtap='updateFun'>重新修改</button>
+      </view>
+      <view class="min-title">备注说明：</view>
+      <textarea class="textarea" bindblur="resultText" placeholder="输入备注说明，如重新修改原因"></textarea>
+      <view class="btn-box">
+        <button class="submit-btn" bindtap='subCheck'>提交</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 未完成项备注 -->
+<view class="modal-mask" hidden="{{ modalHidden }}" catchtouchmove="ture">
+  <view class="modal-box h596">
+    <form>
+      <view class="modal-title">未完成项备注</view>
+      <view class="modal-content">
+        <textarea class=""  bindblur="getRemakVal" value='{{remarkVal}}'  placeholder-class="placeholder-class" placeholder="请输入备注说明"></textarea>
+      </view>
+      <view class="btn-area clearfix">
+        <button class="next-item left" hover-class="none" data-textval="{{ruleIdVal}}" data-current="{{currId}}" data-parentIndex="{{parentIndex}}" bindtap='maskNextItem'>不了，进入下一项</button>
+        <button class="submit-btn left" formType="submit" data-textval="{{ruleIdVal}}" data-current="{{currId}}" data-parentIndex="{{parentIndex}}" bindtap='maskNextItem'>保存</button>
+      </view>
+    </form>
+  </view>
+
+  <image bindtap='modalCancel' class="close-btn bt3" src="../../img/tc-guanbi@2x.png"></image>
+</view>
+
+
+<!-- 温馨提示 modalShow -->
+<view class="modal-mask" hidden="{{ modalShow }}" catchtouchmove="ture">
+  <view class="modal-box h770">
+    <view class="modal-title">温馨提示</view>
+    <view class="modal-content text-centent">
+      <view class="content-title">经大量案例研究发现，大部分投标人被废标的原因是由于投标人对招标文件研究不够深入，细节处理失当而导致的废标。</view>
+      <view class="content-li" >
+        <image class="order-icon" src="../../img/tc-icon01@2x.png"></image>
+        自检前，请确认已认真阅读招标文件2-3遍，并已标示出重点部分及必须提供的材料。
+      </view>
+      <view class="content-li" >
+        <image class="order-icon" src="../../img/tc-icon02@2x.png"></image>
+        自检时，请务必仔细核对和校对，任意一项遗漏均有可能导致废标。
+      </view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="know-btn" bindtap="promptCancel">我知道了</view>
+    </view>
+  </view>
+  <image bindtap='promptCancel' class="close-btn bt3" src="../../img/tc-guanbi@2x.png"></image>
+</view>
+
+
+<!-- 保存提示 -->
+<view class="modal-mask" hidden='{{checkSaveModel}}'>
+  <view class="modal-box h476">
+    <view class="modal-title">保存</view>
+    <view class="modal-content text-centent">
+      <view class="w540">请选择标书检验结果！</view>
+    </view>
+    <view class="modal-btn-box">
+      <view class="know-btn" bindtap="">我知道了</view>
+    </view>
+  </view>
+  <image bindtap=' ' class="close-btn" src="../../img/tc-guanbi@2x.png"></image>
+</view>

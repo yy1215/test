@@ -1,0 +1,81 @@
+<!--pages/ongoingProject/ongoingProject.wxml 进行中的项目-->
+<view class="index-header">
+  <view class="line-blue"></view>
+  <view class="header-top">
+    <image class="left-icon" src="../../img/sx-jingxing@2x.png"></image>
+    <text>{{projectTypeStr}}</text>
+    <!-- 顶部菜单 -->
+    <view class="top-menu">
+      <image class="menu-icon" bindtap="subNav" src="../../img/gz-fenlei@2x.png"></image>
+      <view class="menu-list"  wx:if= hidden="{{hiddenSub}}">
+        <view class="li">
+          <image class="li-icon" src="../../img/fl-jingxing@2x.png"></image>
+          <navigator url="../ongoingProject/ongoingProject?projectType=ongoing" hover-class="navigator-hover">进行中项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-lishi@2x.png"></image>
+          <navigator url="../ongoingProject/ongoingProject?projectType=history" hover-class="navigator-hover">历史项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-xiangmu@2x.png"></image>
+          <navigator url="../projectReport/projectReport" hover-class="navigator-hover">项目报表</navigator>
+        </view> 
+      </view>
+      <!-- 下拉栏层 -->
+      <view class="menu-layer"  hidden="{{hiddenSub}}"></view>
+
+    </view>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="section">
+  <view wx:if="{{projects}}" >
+    <navigator class="item  clearfix  {{project.name.length>19?'my-bg':'cy-bg'}}" wx:for="{{projects}}" wx:for-index="id" wx:for-item="project" wx:key="unique"  url="../detailsDefault/detailsDefault?projectId={{project.id}}" hover-class='none'>
+      <view class="li-title">
+          <text class="icon-my left" wx:if="{{project.createUser == userId}}">我</text>
+        <text>{{project.name}}</text>
+      </view> 
+      <view class="tiem-box clearfix">
+        <view class="clearfix">
+          <view class="time-title start-title  left"> 
+            <view class="icon-tiem start-icon"></view>报名时间
+          </view>
+          <navigator class="see-details right" url="../detailsDefault/detailsDefault?projectId={{project.id}}">
+            查看详情 <view class="arrow-right"></view>
+          </navigator>
+        </view>
+        <view class="star-time time-border">
+          <view class="time">{{project.enrollStart}}</view>
+          <view class="zhi">至</view>
+          <view class="time">{{project.enrollEnd}}</view>
+        </view>
+        <view class="end-time left">
+          <view class="time-title"><view  class="icon-tiem end-icon"></view>投标截止时间</view>
+          <view class="time time-border">{{project.bidEnd}}</view>
+        </view>
+        <view class="creation-time left">
+          <view class="time-title"><view  class="icon-tiem create-icon"></view>创建时间</view>
+          <view class="time time-border">{{project.createTime}}</view>
+        </view>
+      </view>
+    </navigator>
+    <form bindsubmit='submit' report-submit='true'>  
+      <button form-type='submit' type='default' class="add-btn" bindtap='addProject' hover-class="none">
+        <image class="add-img" src="../../img/jxz-tianjia@2x.png"></image>
+      </button>
+    </form>
+ </view>
+
+  <view wx:else>
+    <!-- 暂无项目 -->
+    <view class="no-project">
+      <image src="../../img/wuwendang.png"></image>
+      <view class="no-text">当前暂无进行中项目</view>
+      <navigator class="create-btn" url="../editProject/editProject">立即创建</navigator>
+    </view>  
+  </view>
+   
+</view>
+<view class="index-footer {{projects.length<3?'pre':''}} ">
+  <navigator url="../opinion/opinion">吐槽</navigator>
+</view>

@@ -1,0 +1,57 @@
+/**index.wxss**/
+page{
+  background: #629AF9 url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img//bg@2x.png') no-repeat top center;
+  background-size: 100% 100%;
+}
+.index-box{
+  width:100%;
+  font-size: 30rpx;
+  color: #666;
+  padding: 105rpx 91rpx 40rpx;
+}
+.list-btn{
+  width: 568rpx;
+  height: 96rpx;
+  padding: 0;
+  margin-bottom: 57rpx;
+  border-radius: 50rpx;
+}
+.list-btn::after{
+  border: 0;
+}
+.list-btn image{
+  width: 100%;
+  height: 100%;
+}
+.text-box {
+  font-size: 28rpx;
+  color: #666;
+  padding: 52rpx 5rpx 0;
+}
+.text-box image{
+  width: 289rpx;
+  height: 105rpx;
+  display: block;
+  margin: 0 auto 37rpx;
+}
+.text-box text{
+  display: block;
+  line-height: 50rpx;
+  text-indent: 40rpx;
+  text-align: justify;
+}
+
+
+.add-project{
+  width: 318rpx;
+  line-height: 102rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img//icon-cj@2x.png') no-repeat top center;
+  background-size: 100% 100%;
+  padding: 0;
+}
+.add-project::after{
+  border: 0;
+  border-radius: 0;
+}

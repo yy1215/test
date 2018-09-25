@@ -1,0 +1,40 @@
+/* pages/opinion/opinion.wxss */
+.opinion{
+  padding: 24rpx 30rpx 0;
+}
+.opinion .phcolor{
+  color: #999;
+}
+.opinion textarea,.opinion input{
+  width:690rpx;
+  height:420rpx;
+  font-size: 30rpx;
+  border-radius:10px;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.08);
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.opinion textarea{
+  position: relative;
+}
+.currentNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  left: 570rpx;
+  bottom: 0rpx;
+}
+.opinion input{
+  height:90rpx;
+  line-height: 90rpx;
+  margin: 30rpx 0 90rpx;
+}
+.save-btn{
+  width:600rpx;
+  height:90rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background:#629AF9;
+  border-radius:10rpx;
+}

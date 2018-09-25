@@ -1,0 +1,61 @@
+/* pages/remindSet/remindSet.wxss */
+.remind-title{
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 30rpx;
+}
+.remind-form checkbox-group{
+  font-size: 30rpx;
+  color: #333;
+  background: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 10rpx;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.remind-form .item{
+  display: block;
+  width: 100%;
+  line-height: 100rpx;
+  border-top: 1px solid #e5e5e5;
+}
+.remind-form .item:first-of-type{
+  border-top: 0;
+}
+.remind-form .checkbox .wx-checkbox-input{
+  border-radius: 50%;
+  width:42rpx;
+  height:42rpx;
+}
+.remind-form .checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1px solid #629AF9;
+  background: #629AF9;
+}
+.remind-form .checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 42rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 42rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 42rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.remind-p{
+  font-size: 30rpx;
+  color: #999;
+  margin: 20rpx 60rpx 0 30rpx;
+  
+}
+.remind-p text{
+  display: block;
+  padding-left: 20rpx;  
+}
+.remind-p text.icon-xing{
+  color: #f00;
+  padding-left: 0;
+  float: left;
+}

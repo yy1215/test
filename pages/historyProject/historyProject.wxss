@@ -1,0 +1,103 @@
+/* pages/historyProject/historyProject.wxss */
+page{
+  height: 100%;
+}
+.section .item{
+  width: 690rpx;
+  margin: 24rpx auto 0; 
+  padding:0 30rpx 36rpx;
+}
+.my-bg{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/bg-03@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.cy-bg{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/bg-04@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.section .item .li-title{
+  font-size: 30rpx;
+  padding:30rpx 0 22rpx;
+}
+.section .item .li-title .icon-my{
+  width: 48rpx;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/gz-wo-bg@2x.png') no-repeat;
+  background-size: 100% 100%;
+  margin: 2rpx 5rpx 0 0;
+}
+.start-title{
+  padding-top: 27rpx;
+}
+.see-details{
+  width:167rpx;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 48rpx;
+  text-align: center;
+  background:#629AF9;
+  border-radius: 30rpx 0 0 30rpx;
+  margin-top: 14rpx;
+  margin-right: -23rpx;
+}
+.section .item .time-title{
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: #666;
+  padding-bottom: 17rpx;
+}
+.section .item  .time-border{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 70rpx;
+  border: 1px solid #d0e1fd;
+  border-radius:5rpx;
+  text-align: center;
+}
+.star-time{
+  margin-bottom: 40rpx;
+}
+.star-time view{
+ display: inline-block;
+}
+.star-time .zhi{
+  width:40rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background:#629AF9;
+  border-radius:50%;
+  margin: 25rpx 25rpx 0;
+}
+.end-time,.creation-time{
+  width: 290rpx;
+}
+.creation-time{
+ border-left: 1px solid #eaf2ff;
+ padding-left: 25rpx;
+ margin-left: 25rpx;
+ box-sizing: content-box;
+}
+.status{
+  display: block;
+  width:240rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #629AF9;
+  background:#f7faff;
+  border-radius:30px;
+  margin: 30rpx auto 0;
+}
+.has-won{
+  color: #F97662;
+  background: #fef2f0;
+}
+.not-won{
+  color: #F9B521;
+  background: #fef7e8;
+}

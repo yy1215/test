@@ -1,0 +1,28 @@
+/* pages/share/share.wxss */
+.share {
+  text-align: center;
+}
+.share .success{
+  width:168rpx;
+  height:150rpx;
+  margin: 160rpx auto 39rpx;
+}
+.share .share-btn{
+  width:600rpx;
+  height:90rpx;
+  font-size: 34rpx;
+  color: #fff;
+  text-align: center;
+  background:#629AF9;
+  border-radius:45rpx;
+  margin: 150rpx auto 30rpx;
+}
+.share  .icon-share{
+  width:36rpx;
+  height:38rpx;
+  margin: 27rpx 10rpx 0 143rpx;
+}
+.share navigator{
+  font-size: 30rpx;
+  color: #666;
+}

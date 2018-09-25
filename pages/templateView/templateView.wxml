@@ -1,0 +1,47 @@
+<!--pages/templateView/templateView.wxml 模版预览 -->
+<view class="section clearfix">
+  <view class="title-box">
+    <view class="top-title">投标文件检查重点(通用版）</view>
+    <view class="table table-title">
+      <view class="tr">
+      <view class="th order">序号</view>
+      <view class="td check-item">检查项目</view>
+      <view class="td check-content">检查内容</view>
+      </view>
+    </view>
+  </view>
+  <view class="content-box clearfix">
+    <view class="floor clearfix">
+      <view class="floor-title" >一、投标文件内容点检</view>
+      <view class="table">
+        <view class="tr">
+          <view class="th order" rowspan="2">1</view>
+          <view class="td check-item" rowspan="2">投标文件结构的正确性、完整性</view>
+          <view class="td check-content">
+            <view class="item">检查投标文件的构成是否按照招标文件要求编制完整？如要求分开编制投标文件商务部分、技术部分、报价部分，则需分开，如无要求则不分开编制。</view>
+            <view class="item">对照目录、评分细则，逐项检查是否一一对应？尤其是招标文件中带★、▲的强制性条款必须响应。</view>
+          </view>
+        </view>
+        <view class="tr">
+          <view class="th order">2</view>
+          <view class="td check-item" >相关名称及信息的正确性</view>
+          <view class="td check-content">
+            <view class="item">检查项目名称、招标编号是否正确和无缺漏？</view>
+            <view class="item"> 检查招标单位名称、代理单位名称是否填写正确？（需按照招标要求在对应地方正确填写相应的单位名称）</view>
+            <view class="item">检查投标单位全称是否填写正确和无错漏？</view>
+            <view class="item">检查授权代表相关信息是否正确？信息内容是否一致？（授权代表相关信息：如姓名及年龄、身份证号码、身份证复印件、联系方式等内容）</view>
+          </view>
+        </view>
+        <view class="tr">
+          <view class="th order">3</view>
+          <view class="td check-item" >相关资质证明文件的正确性</view>
+          <view class="td check-content">
+            <view class="item">检查是否按招标文件要求一一提供投标单位的相关资质证明文件？（如营业执照、资质证书、安全生产许可证等）</view>
+            <view class="item">检查所提供的资质证明文件是否在有效期内？其复印件是否清晰可见？</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<button class="confirm-btn" bindtap="confirm">确认模板</button> 

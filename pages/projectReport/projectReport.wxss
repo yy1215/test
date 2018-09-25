@@ -1,0 +1,57 @@
+/* pages/projectReport/projectReport.wxss */
+page{
+  height: 100%;
+}
+.report-title{
+  font-size: 28rpx;
+  color: #999;
+  padding: 30rpx 30rpx 0;
+}
+.item{
+  width: 696rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin: 30rpx auto 0;
+}
+.projet-total{
+  height: 295rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xmbb.png') no-repeat;
+  background-size: 100% 100%;
+}
+.history-total{
+  height: 321rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/xmbb02.png') no-repeat;
+  background-size: 100% 100%;
+}
+.item-title{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #629AF9;
+}
+.project-num{
+  display: flex;
+  justify-content:space-between;
+  padding-top: 40rpx;
+}
+.num-status{
+  width: 50%;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+}
+.num{
+  display: inline-block;
+  font-size: 40rpx;
+  color: #629AF9;
+  margin-bottom: 10rpx;
+}
+.prompt{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+.prompt text{
+  color: #FB6A5E;
+}

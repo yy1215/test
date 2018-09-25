@@ -1,0 +1,10 @@
+<!--pages/opinion/opinion.wxml-->
+<view class="opinion">
+  <form  bindsubmit="formSubmit">
+    <textarea name="text" placeholder-class="phcolor" placeholder="聊聊您的看法，说说您的意见。说不定您的一句吐槽将成为下一次产品改进方向哦。(限200字以内）"  maxlength="{{max}}" bindinput="textChange">
+      <text class="currentNumber">{{currentNumber|0}}/{{max}}</text>
+    </textarea>
+    <input name="tel" type="text" placeholder-class="phcolor" placeholder="手机号/邮箱（选填，方便我们联系您）" maxlength="30"/>
+    <button formType="submit" class="save-btn" >提交</button>
+  </form>
+</view>

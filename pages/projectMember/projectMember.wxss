@@ -1,0 +1,59 @@
+/* pages/projectMember/projectMember.wxss */
+.member-form checkbox-group{
+  font-size: 30rpx;
+  color: #333;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.member-form .item{
+  display: block;
+  width: 100%;
+  line-height: 72rpx;
+  border-top: 1px solid #e5e5e5;
+  padding: 19rpx 30rpx;
+  box-sizing: border-box;
+}
+.member-form .item:first-of-type{
+  border-top: 0;
+}
+.member-form .img{
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+.member-form .checkbox .wx-checkbox-input{
+  width:42rpx;
+  height:42rpx;
+  border: 1px solid #EDEDED;
+  border-radius: 6rpx;
+}
+.member-form .checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1px solid #629AF9;
+  background: #629AF9;
+}
+.member-form .checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 42rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 42rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 42rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.delete-btn{
+  width:750rpx;
+  height:90rpx;
+  font-size: 34rpx;
+  color: #629AF9;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10px rgba(4,0,0,0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,100 @@
+/* pages/testDetails/testDetails.wxss */
+.icon-arr{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+}
+.arrow-right03{
+  width: 16rpx;
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-jinru .png');
+  background-size: 100% 100%;
+  margin-top: 30rpx;
+  vertical-align: middle;
+}
+.arrow-down{
+  background-image: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-jinru .png');
+  background-size: 100% 100%;
+  margin-top: 37rpx;
+  vertical-align: middle;
+  transform:rotate(90deg);
+}
+.status-btn{
+  display: inline-block;
+  width:160rpx;
+  line-height: 44rpx;
+  font-size: 26rpx;
+  color: #FB6A5E;
+  text-align: center;
+  background:#fef2f0;
+  border-radius:22rpx;
+  margin-left: 40rpx;
+}
+.sectiion .h4{
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #629AF9;
+  padding: 0 30rpx;
+}
+.floor .h3{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #333;
+  padding: 0 30rpx;
+  border-bottom:1px solid #ededed;
+  background: #fff;
+}
+.floor .item{
+  font-size: 28rpx;
+  padding-top: 25rpx;
+  margin: 0 30rpx;
+  border-bottom: 1px dashed #ededed;
+}
+.floor .item:last-of-type{
+  border-bottom:none;
+}
+.floor .item .item-title{
+  color: #666;
+  margin-bottom: 25rpx;
+}
+.floor .item  .order{
+  display: inline-block;
+  width:32rpx;
+  height:32rpx;
+  line-height: 32rpx;
+  color: #fff;
+  text-align: center;
+  background:rgba(98,154,249,1);
+  border-radius:5rpx;
+  margin-right: 10rpx;
+}
+.floor .item .item-remark{
+  color: #999;
+  padding-bottom: 28rpx;
+}
+.floor .item .item-remark text{
+  color: #629AF9;
+}
+.icon-mark{
+  display: inline-block;
+}
+.mark-correct{
+  display: inline-block;
+  width: 30rpx;
+  height: 22rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zmxj-dui@2x.png') no-repeat center;
+  background-size: 100%;
+}
+.mark-error{
+  display: inline-block;
+  width: 30rpx;
+  height: 22rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zmxj-cuo@2x.png') no-repeat center;
+  background-size: 100%;
+}
+.more{
+  width:100%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center; 
+}

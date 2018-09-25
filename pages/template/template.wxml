@@ -1,0 +1,15 @@
+<view class="seciton clearfix">
+  <view class="item-box" wx:for="{{ template }}" wx:for-item="item" wx:for-index="index" wx:key="this" bindtap="selectTemp" data-id="{{ index }}">
+    <view class="img-box">
+      <image src="{{ item.image }}"></image>
+      <view  class="img-layer"  wx:if="{{item.show }}"></view>
+    </view>
+    <view class="title">
+      <text>{{ item.name }}</text>
+      <text class="line"></text>
+    </view>
+  </view>
+</view>
+<view class="remark">更多模板待开放中…</view>
+<view class="prompt {{modelId==null?'show':'hide'}}">请选择模版</view>
+<button class="confirm-btn" bindtap="confirm">前往预览</button>

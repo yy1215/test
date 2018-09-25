@@ -1,0 +1,29 @@
+<!--pages/testDetails/testDetails.wxml 标书自检详情 -->
+<view class="sectiion clearfix" wx:for="{{ testList }}" wx:for-item="testList" wx:key="this" wx:for-index="parentIndex">
+  <!-- 一级  -->
+  <view class="h4">{{testList.stage}}</view>
+  <!-- 二级 -->
+  <view class="floor" wx:for="{{testList.floor}}" wx:for-item="floor"  data-parentIndex="{{parentIndex}}" wx:key="this"  wx:for-index="floorIndex" >
+    <view class="h3" data-parentIndex="{{parentIndex}}" catchtap="listTap" data-index="{{floorIndex}}">
+      <text>{{ floor.pointName  }}</text> 
+      <view class="status-btn">{{ floor.status  }}</view>
+      <view class="icon-arr arrow-right03  right {{floor.show&&'arrow-down'}}"></view>
+      {{ floor.isShow }}
+    </view>
+    <!-- 第三层 -->
+    <view class="items" wx:if="{{floor.show }}"  data-parentIndex="{{parentIndex}}" >
+      <view class="item"  wx:for="{{floor.items}}" wx:for-item="items"  wx:key="this">
+        <view class="item-title">
+          <text class="order">{{index+1}}</text>
+          <text>{{items.content}}</text>
+          <text class="icon-mark">( <text class="{{items.completion==true?'mark-correct':'mark-error'}}"></text> )</text>
+        </view>
+        <view class="item-remark {{ items.remark==''?'hide':'' }} "><text>备注：</text>{{ items.remark }}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<navigator class="more" url="">查看更多</navigator>
+
+
+

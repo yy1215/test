@@ -1,0 +1,132 @@
+<!--pages/historyProject/historyProject.wxml 历史项目-->
+<view class="index-header">
+  <view class="line-blue"></view>
+  <view class="header-top">
+    <image class="left-icon" src="../../img/sx-lishi@2x.png"></image>
+    <text>历史项目</text>
+    <!-- 顶部菜单 -->
+    <view class="top-menu">
+      <image class="menu-icon" bindtap="subNav" src="../../img/gz-fenlei@2x.png"></image>
+      <view class="menu-list"  wx:if= hidden="{{hiddenSub}}">
+        <view class="li">
+          <image class="li-icon" src="../../img/fl-jingxing@2x.png"></image>
+          <navigator url="../ongoingProject/ongoingProject" hover-class="navigator-hover">进行中项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-lishi@2x.png"></image>
+          <navigator url="../historyProject/historyProject" hover-class="navigator-hover">历史项目</navigator>
+        </view>
+         <view class="li">
+          <image class="li-icon" src="../../img/fl-xiangmu@2x.png"></image>
+          <navigator url="../projectReport/projectReport" hover-class="navigator-hover">项目报表</navigator>
+        </view> 
+      </view>
+      <!-- 下拉栏层 -->
+      <view class="menu-layer"  hidden="{{hiddenSub}}"></view>
+    </view>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="section ">
+  <view class="item my-bg clearfix">
+    <navigator class="li-title" url="">
+      <text class="icon-my left">我</text>
+      <text>横琴金融岛国际商务中心(17#)基坑支护及桩基础工程监理招标项目</text>
+    </navigator>
+    <view class="tiem-box clearfix">
+      <view class="clearfix">
+        <view class="time-title start-title  left"> 
+          <view class="icon-tiem start-icon"></view>报名时间
+        </view>
+        <navigator class="see-details right" url="">
+          查看详情 <view class="arrow-right"></view>
+        </navigator>
+      </view>
+      <view class="star-time time-border">
+        <view class="time">2018-02-11 16:00</view>
+        <view class="zhi">至</view>
+        <view class="time">2018-02-11 16:00</view>
+      </view>
+      <view class="end-time left">
+        <view class="time-title"><view  class="icon-tiem end-icon"></view>投标截止时间</view>
+        <view class="time time-border">2018-02-11 16:00</view>
+      </view>
+      <view class="creation-time left">
+        <view class="time-title"><view  class="icon-tiem create-icon"></view>创建时间</view>
+        <view class="time time-border">2018-02-11 16:00</view>
+      </view>
+    </view> 
+    <view class="status">标记开标结果></view>
+  </view>
+  <view class="item cy-bg clearfix">
+      <navigator class="li-title " url="">
+        <text class="icon-my left hide">我</text>
+        <text>横琴金融岛国际商务中心</text>
+      </navigator>
+      <view class="tiem-box clearfix">
+        <view class="clearfix">
+          <view class="time-title start-title  left"> 
+            <view class="icon-tiem start-icon"></view>报名时间
+          </view>
+          <navigator class="see-details right" url="">
+            查看详情 <view class="arrow-right"></view>
+          </navigator>
+        </view>
+        <view class="star-time time-border">
+          <view class="time">2018-02-11 16:00</view>
+          <view class="zhi">至</view>
+          <view class="time">2018-02-11 16:00</view>
+        </view>
+        <view class="end-time left">
+          <view class="time-title"><view  class="icon-tiem end-icon"></view>投标截止时间</view>
+          <view class="time time-border">2018-02-11 16:00</view>
+        </view>
+        <view class="creation-time left">
+          <view class="time-title"><view  class="icon-tiem create-icon"></view>创建时间</view>
+          <view class="time time-border">2018-02-11 16:00</view>
+        </view>
+      </view>
+      <view class="status has-won">已中标</view>
+  </view>
+    <view class="item my-bg clearfix">
+    <navigator class="li-title" url="">
+      <text class="icon-my left">我</text>
+      <text>横琴金融岛国际商务中心(17#)基坑支护及桩基础工程监理招标项目</text>
+    </navigator>
+    <view class="tiem-box clearfix">
+      <view class="clearfix">
+        <view class="time-title start-title  left"> 
+          <view class="icon-tiem start-icon"></view>报名时间
+        </view>
+        <navigator class="see-details right" url="">
+          查看详情 <view class="arrow-right"></view>
+        </navigator>
+      </view>
+      <view class="star-time time-border">
+        <view class="time">2018-02-11 16:00</view>
+        <view class="zhi">至</view>
+        <view class="time">2018-02-11 16:00</view>
+      </view>
+      <view class="end-time left">
+        <view class="time-title"><view  class="icon-tiem end-icon"></view>投标截止时间</view>
+        <view class="time time-border">2018-02-11 16:00</view>
+      </view>
+      <view class="creation-time left">
+        <view class="time-title"><view  class="icon-tiem create-icon"></view>创建时间</view>
+        <view class="time time-border">2018-02-11 16:00</view>
+      </view>
+    </view> 
+    <view class="status not-won">未中标</view>
+  </view>
+</view>
+<!-- 暂无项目 -->
+  <view class="no-project">
+    <image src="../../img/wuwendang.png"></image>
+    <view class="no-text">当前暂无进行中项目</view>
+    <navigator class="create-btn" url="../editProject/editProject">立即创建</navigator>
+  </view>  
+
+<view class="index-footer ">
+  <navigator url="../opinion/opinion">吐槽</navigator>
+</view>
+<navigator class="add-btn" hover-class="none" url="../editProject/editProject"><image class="add-img" src="../../img/jxz-tianjia@2x.png"></image></navigator>

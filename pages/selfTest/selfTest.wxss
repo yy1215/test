@@ -1,0 +1,217 @@
+/* pages/selfTest/selfTest.wxss */
+page{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/bg.png') no-repeat center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+/* 阶段 */
+.level-box {
+  height: 30rpx;
+  margin-left: 147rpx;
+  margin-top: 60rpx;
+}
+.level-box .level{
+  display: block;
+  width: 90rpx;
+  height: 30rpx;
+  float: left;
+  position: relative;
+}
+.level-box .level:last-of-type:after{
+  width: 110rpx;
+}
+.level-box .level:after{
+  display: block;
+  content: '';
+  width: 90rpx;
+  height: 3rpx;
+  background: #E5E5E5;
+  position: absolute;
+  left: 0;
+  top: 14rpx;
+}
+.level-box .icon-level{
+  display: block;
+  width:22rpx;
+  height:22rpx;
+  background:rgba(229,229,229,1);
+  border-radius:10px;
+  position: absolute;
+  top: 4rpx;
+  left: 0;
+  z-index: 1;
+}
+.level-box .level.active .icon-level{
+  width:30rpx;
+  height:30rpx;
+  background:#F97662;
+  top: 0;
+}
+ .level-box .level.active:after{
+  background:#F97662;
+  top: 14rpx;
+ }
+
+/* 主内容 */
+.section{
+  width: 602rpx;
+  height: 737rpx;
+  margin: 100rpx auto 0;
+  overflow: hidden;
+}
+.item-box{
+  width: 602rpx;
+  height: 737rpx;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-bg@2x.png') no-repeat center;
+  background-size: 100% 100%;
+ 
+  
+}
+.item-box .title{
+  line-height: 120rpx;
+  font-size: 34rpx;
+  color: #629AF9;
+  text-align: center;
+  overflow: hidden;
+}
+.item-box .title image{
+  display: inline-block;
+  width: 90rpx;
+  height: 17rpx;
+}
+.item-box .content{
+  height: 600rpx;
+  font-size: 30rpx;
+  color: #333;
+  padding: 0 30rpx;
+  overflow: hidden;
+   position: relative;
+}
+/* 开始检查 */
+.start-checking .min-title{
+  font-size: 34rpx;
+  text-align: center;
+  margin: 50rpx 0;
+}
+.start-checking .prompt-1{
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 139rpx;
+}
+.start-checking .prompt-1 .icon-xing{
+  color: #f00;
+}
+.check-btn,.submit-btn{
+  width:360rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zi-kaishi@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* 检查结果 */
+.test-result .min-title{
+  font-size: 28rpx;
+  margin: 30rpx 0;
+}
+.test-result .result-btn .btn{
+  width:188rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #629AF9;
+  background: #fff;
+  border:1px solid #629AF9;
+  border-radius:30rpx;
+  float: left;
+  margin-right: 52rpx;
+}
+.test-result .result-btn .btn.active{
+  color: #fff;
+  background: #629AF9;
+  border-radius:30rpx;
+}
+.test-result .result-btn .button-hover{
+  color: #fff;
+  background:#629AF9; 
+  border-radius:30px;
+}
+.test-result .textarea{
+  width:540rpx;
+  height:199rpx;
+  background:rgba(248,248,248,1);
+  border:1px solid #fff;
+  border-radius:10rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+
+/* 检查内容 */
+.order-item .order-title{
+  color: #666;
+  margin: 20rpx 0 10rpx;
+}
+.order-item .text{
+  text-indent: 40rpx;
+  text-align: justify;
+}
+.order-item .prompt{
+  font-size: 28rpx;
+  color: #629AF9;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.order-item .prompt image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.order-item .btn-box{
+  position: absolute;
+  bottom: 105rpx;
+}
+.order-item .btn{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.order-item .btn::after{
+  border: none;
+  border-radius: 0;
+}
+.order-item .btn.error-btm{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-cuo@2x.png') no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 93rpx;
+}
+.order-item .btn.confirm-btm{
+  background: url('http://bxkc.oss-cn-shanghai.aliyuncs.com/cdn/wx/magpie/img/zj-dui@2x.png') no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 154rpx;
+}
+.page-box{
+  width: 90%;
+  line-height: 31rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #629AF9;
+  position: absolute;
+  bottom: 40rpx;
+}
+.page-box .prev-page{
+  display: inline-block;
+}
+.page-box .prev-page.page-num{
+  font-weight: normal;
+  font-size: 30rpx;
+  color: #999;
+  position: absolute;
+  right: 0rpx;
+}
+.w540{
+  width: 540rpx;
+  text-align: center;
+}
